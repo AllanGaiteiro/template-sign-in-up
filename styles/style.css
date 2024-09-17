@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    position: relative;
+    width: 600px;
+    height: 360px;
+    border-radius: 10px;
+    overflow: hidden; /* Adiciona overflow escondido para evitar sobreposição */
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.226);
+    background-color: white;
+}
+
+.sign, .sign-info {
+    margin: auto;
+    width: 260px;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    transform-origin: center;
+}
+
+.sign {
+    z-index: 2;
+
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    transition: opacity 0.6s ease-in-out;
+    position: absolute;
+    transform-origin: center; /* Define o ponto de origem da transformação */
+    transition: transform 0.6s ease-in-out;
+    right: 0;
+}
+
+.sign-info {
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 0px 30% 30% 0px;
+    background-color: #7004F5;
+    transition: transform 0.6s ease-in-out, border-radius 0.6s ease-in-out; /* Adiciona border-radius à transição */
+    left: 0;
+}
+
+.sign-info.move-right {
+    border-radius: 30% 0px 0px 30%; /* Valor final de border-radius */
+    transform: translateX(300px); /* Ajuste o valor conforme necessário para seu layout */
+}
+
+.sign.move-left {
+    transform: translateX(-300px);
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.form-field {
+    display: block;
+    background-color: #0057b300;
+    margin: 10px;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.form-button {
+    margin: auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #7004F5;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-button:hover {
+    background-color: #0057b300;
+    border: 1px solid #7004F5;
+    color: #7004F5;
+}
+
+.sign-in-button, .sign-up-button {
+    background-color: #0057b300;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sign-in-button:hover, .sign-up-button:hover {
+    border: 1px solid #7004F5;
+    color: #7004F5;
+    background-color: white;
+}
+.icon-buttons {
+    display: flex;
+    justify-content: center;
+}
+.icon-buttons button {
+    width: 40px;
+    height: 40px;
+    margin: 0px 4px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #ffffff00;
+    border: 1 solid black;
+    transition: background-color 0.3s;
+}
+
+.icon-buttons button:hover {
+    background-color: #7004F5;
+    border-color: #7004F5;
+}
+
+.icon-buttons svg {
+    width: 30px;
+    height: 30px;
+    fill: rgb(0, 0, 0);
+}
+
+.icon-buttons svg:hover{
+    fill: rgb(255, 255, 255);
+
+}
+
+.active {
+    display: block;
+}
+
+.desactive {
+    display: none;
+}
